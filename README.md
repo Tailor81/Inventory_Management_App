@@ -18,25 +18,40 @@ Install Python Packages:
 pip install tk mysql-connector-python tkcalendar
 
 # MySQL Setup:
+Install MySQL Community edition to run on local machine, it comes with a MySQL server or use any database of your choice
 Create a MySQL database named inventory_db.
 Create an admin table for login purposes:
+
+CREATE DATABASE inventory_db
+USE inventory_db
 
 CREATE TABLE admin (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL
+    password VARCHAR(255) NOT NULL
 );
 
-INSERT INTO admin (username, password) VALUES ('admin', 'admin');  
+INSERT INTO admin (username, password) VALUES ('admin', 'adminpass');
+ALTER TABLE admin
+    ADD COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 
 CREATE TABLE inventory (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    item_name VARCHAR(100),
-    quantity INT,
-    price DECIMAL(10, 2),
-    date DATE
+    `table_name` VARCHAR(100) NOT NULL,
+    `ref_number` VARCHAR(255) NOT NULL,
+    `item_name` VARCHAR(100) NOT NULL,
+    `unit_price` DECIMAL(10, 2) NOT NULL,
+    `max_stock` INT NOT NULL,
+    `min_stock` INT NOT NULL,
+    `ordering_level` INT NOT NULL,
+    `date` DATE NOT NULL,
+    `to_or_from` VARCHAR(100) NOT NULL,
+    `voucher_order_number` VARCHAR(255) NOT NULL,
+    `qty_revd` INT,
+    `qty_issued` INT,
+    `balance` INT,
+    `signature` VARCHAR(255)
 );
-
 # Usage
 Run the Application:
 python inventory_app.py
