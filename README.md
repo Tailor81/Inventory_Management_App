@@ -1,23 +1,23 @@
 # Inventory_Management_App
  This is a Python-based Inventory Management System using the tkinter library for the GUI and mysql.connector for connecting to a MySQL database. The application supports basic CRUD (Create, Read, Update, Delete) operations, login/logout functionality, and table management.
 
-#Features
+# Features
 User Authentication: Login and logout functionalities for secure access.
 Table Management: Load and display data from different tables.
 CRUD Operations: Add, edit, and delete inventory items.
 Dynamic Form Generation: Forms are generated dynamically based on the table schema, with special handling for date fields.
 Data Display: Inventory data is displayed in a table with sortable columns.
 
-#Prerequisites
+# Prerequisites
 Python 3.x
 MySQL database
 Required Python packages: tkinter, mysql-connector-python, tkcalendar
 
-#Installation
+# Installation
 Install Python Packages:
 pip install tk mysql-connector-python tkcalendar
 
-#MySQL Setup:
+# MySQL Setup:
 Create a MySQL database named inventory_db.
 Create an admin table for login purposes:
 
@@ -38,14 +38,14 @@ CREATE TABLE inventory (
     date DATE
 );
 
-#Usage
+# Usage
 Run the Application:
 python inventory_app.py
 
 Login:
 Use the credentials defined in the admin table to log in.
 
-Main Interface:
+# Main Interface:
 Logout: Click the "Logout" button to log out.
 Select Table: Use the dropdown to select a table to view and manage.
 Add Item: Click the "Add" button to add a new item.
@@ -54,10 +54,10 @@ Delete Item: Select an item and click the "Delete" button to remove it.
 Refresh: Click the "Refresh" button to reload the table data.
 
 
-#Code Explanation
-Main Classes and Methods
-InventoryApp Class:
+# Code Explanation
+Main Classes and Methods 
 
+InventoryApp Class:
 Initializes the main application, sets up the login frame, and manages the database configuration.
 
 create_login_frame:
@@ -90,12 +90,12 @@ Deletes the selected item from the table.
 logout:
 Logs out the current user and returns to the login screen.
 
-#Customization
+# Customization
 Database Configuration: Update the self.db_config dictionary with your MySQL database credentials.
 Table Schema: Ensure the table schemas in your database match the fields expected by the application.
 User Interface: Customize the tkinter widgets and layout to fit your needs.
 
-#Converting to Executable
+# Converting to Executable
 To convert the script to an executable, you can use pyinstaller:
 pip install pyinstaller
 pyinstaller --onefile inventory_app.py
