@@ -27,8 +27,7 @@ CREATE TABLE admin (
     password VARCHAR(50) NOT NULL
 );
 
-INSERT INTO admin (username, password) VALUES ('admin', 'admin');  -- Example admin user
-Create other necessary tables for your inventory management, e.g.:
+INSERT INTO admin (username, password) VALUES ('admin', 'admin');  
 
 CREATE TABLE inventory (
     id INT AUTO_INCREMENT PRIMARY KEY,
