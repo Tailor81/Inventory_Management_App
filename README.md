@@ -47,10 +47,15 @@ Use the credentials defined in the admin table to log in.
 
 # Main Interface:
 Logout: Click the "Logout" button to log out.
+
 Select Table: Use the dropdown to select a table to view and manage.
+
 Add Item: Click the "Add" button to add a new item.
+
 Edit Item: Select an item and click the "Edit" button to modify it.
+
 Delete Item: Select an item and click the "Delete" button to remove it.
+
 Refresh: Click the "Refresh" button to reload the table data.
 
 
