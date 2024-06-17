@@ -12,7 +12,7 @@ class InventoryApp:
             'host': 'localhost',
             'database': 'inventory_db',
             'user': 'root',  # replace with your MySQL username
-            'password': 'Tecboy@1122'  # replace with your MySQL password
+            'password': ''  # replace with your MySQL password
         }
         self.logged_in = False
         self.create_login_frame()
